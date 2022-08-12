@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Three from './pages/Three';
+import Rxjs from './pages/Rxjs';
 import reactLogo from './assets/react.svg';
 import './App.less';
 
@@ -31,4 +34,17 @@ function App() {
   );
 }
 
-export default App;
+const AppRoute: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="three" element={<Three />} />
+        <Route path="rxjs" element={<Rxjs />} />
+        <Route path="*" element={<App />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default AppRoute;
