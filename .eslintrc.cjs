@@ -29,6 +29,8 @@ module.exports = {
     'space-before-function-paren': 0,
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
+    'no-empty-function': 'off',
+    '@typescript-eslint/no-empty-function': ['warn'],
     'react/jsx-filename-extension': [
       2,
       {
